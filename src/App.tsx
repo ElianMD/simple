@@ -1,7 +1,8 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Farewell from "./Farewell";
 import Greeting from "./Greeting";
 import people from "./people.json";
+import { Link, Route, Routes } from "react-router-dom";
 export default function App(): JSX.Element {
   const greetings = people.names.map((person) => {
     return (
@@ -15,12 +16,26 @@ export default function App(): JSX.Element {
       </Fragment>
     );
   });
-
+  const stateArray = useState(0);
+  const [count, setCount] = stateArray;
+  console.log("state", count);
+  function increase() {
+    setCount((currCount) => currCount + 1);
+    console.log("increase", count);
+  }
   return (
     <>
-      {greetings}
-      <p>World</p>
-      <Farewell name="Harry" age={25} />
+      <h1>Simple</h1>
+      <p>{count}</p>
+      <button onClick={increase}>Increase</button>
+      <p>
+        <Link to="/">Home!</Link>
+      </p>
+
+      <Link to="/greetings">Greetings!</Link>
+      <Routes>
+        <Route path="/greetings" element={greetings} />
+      </Routes>
     </>
   );
 }
