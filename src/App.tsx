@@ -33,16 +33,21 @@ export default function App(): JSX.Element {
   });
   const stateArray = useState(0);
   const [count, setCount] = stateArray;
-  console.log("state", count);
   function increase() {
-    setCount((currCount) => currCount + 2);
-    console.log("increase", count);
+    setCount((currCount) => currCount + 1);
+  }
+  const days = useState(1);
+  const [page, setPage] = days;
+  function pages() {
+    setPage((currPage) => currPage + 1);
   }
   return (
     <>
       <h1>Simple</h1>
       <p>{count}</p>
       <button onClick={increase}>Increase</button>
+      <p>{page}</p>
+      <button onClick={pages}>Next Page</button>
       <p>
         <Link to="/">Home!</Link>
       </p>
