@@ -1,6 +1,32 @@
 {
   "names": [
-    { "name": "Elian", "punctuation": "!", "age": 25, "job": "engineer" },
-    { "name": "David", "punctuation": "?", "age": 31, "job": "engineer" }
+    {
+      "name": "Elian",
+      "punctuation": "!",
+      "age": 25,
+      "job": "engineer",
+      "gender": "male"
+    },
+    {
+      "name": "David",
+      "punctuation": "?",
+      "age": 31,
+      "job": "engineer",
+      "gender": "male"
+    },
+    {
+      "name": "Harry",
+      "punctuation": "^^",
+      "age": 67,
+      "job": "engineer",
+      "gender": "male"
+    },
+    {
+      "name": "Kiro",
+      "punctuation": "**",
+      "age": 98,
+      "job": "engineer",
+      "gender": "male"
+    }
   ]
 }
